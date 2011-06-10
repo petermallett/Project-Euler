@@ -2,20 +2,26 @@
 import time
 start = time.clock()
 
-def test_divisors(n):
-	#dont test 1, 2, 5, 10 or 20
-	list = [3,4,6,7,8,9,11,12,13,14,15,16,17,18,19]
-	for x in list:
-		if (n % x != 0):
-			return False
+def gcd(a, b):
+	while (a and b != 0):
+		if (a < b):
+			b -= a
+		else:
+			a -= b
+			
+	if (a == 0):
+		return b
+	elif (b == 0):
+		return a
 
-	return True
+def lcm(a, b):
+	return(int(a * b / gcd(a, b)))
 
-a = 20
-while(not test_divisors(a)):
-	a += 20
+num = 1
+for x in range(2, 21):
+	num = lcm(x, num)
 
-print(a)
+print(num)
 
 end = time.clock()
 print(end-start)
