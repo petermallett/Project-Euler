@@ -2,17 +2,10 @@
 import time
 start = time.clock()
 
-def gcd(a, b):
-	while (a and b != 0):
-		if (a < b):
-			b -= a
-		else:
-			a -= b
-			
-	if (a == 0):
-		return b
-	elif (b == 0):
-		return a
+def gcd(x, y):
+    while y:
+        x, y = y, x % y
+    return x
 
 def lcm(a, b):
 	return(int(a * b / gcd(a, b)))
