@@ -1,12 +1,12 @@
 ﻿# What is the 10001st prime number?
 
-from math import sqrt
+import math
 
 def is_prime(n):
 	if (n < 2):
 		return False
 
-	for x in range(2, int(sqrt(n))+1):
+	for x in range(2, int(math.sqrt(n))+1):
 		if (n % x == 0):
 			return False
 

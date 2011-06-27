@@ -1,13 +1,13 @@
-from math import sqrt
-
 #find the largest prime factor of 600851475143
+import math
+
 number = 600851475143
 
 def is_prime(n):
 	if (n < 2):
 		return False
 
-	for x in range(2, int(sqrt(n))+1):
+	for x in range(2, int(math.sqrt(n))+1):
 		if (n % x == 0):
 			return False
 
