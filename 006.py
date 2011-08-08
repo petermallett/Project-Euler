@@ -8,3 +8,4 @@ for x in range(1, 101):
 square_of_sum = sum * sum
 
 print(square_of_sum - sum_of_squares)
+

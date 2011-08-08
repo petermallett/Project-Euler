@@ -9,3 +9,4 @@ for x in reversed(range(100, 1000)):
 			if (prod > pal):
 				pal = prod
 print (pal)
+

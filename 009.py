@@ -5,7 +5,6 @@
 
 # There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 # Find the product abc.
-import math
 
 for a in range(1, 997):
 	for b in range(a+1, 998):
@@ -13,3 +12,4 @@ for a in range(1, 997):
 		if (a + b + c == 1000):
 			if (a * a + b * b == c * c):
 				print(a * b * c)
+

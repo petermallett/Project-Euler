@@ -26,3 +26,4 @@ while (number != 10001):
 	number += 1
 
 print(prime)
+
