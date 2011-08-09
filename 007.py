@@ -13,14 +13,14 @@ def is_prime(n):
 	return True
 	
 def find_next_prime(n):
-	x = n
 	while(True):
-		x += 1
-		if (is_prime(x)):
-			return x
-			
-number = 1
-prime = 2
+		n += 2
+		if (is_prime(n)):
+			return n
+
+#starting with 2nd prime
+number = 2
+prime = 3
 while (number != 10001):
 	prime = find_next_prime(prime)
 	number += 1
