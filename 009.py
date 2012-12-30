@@ -7,9 +7,8 @@
 # Find the product abc.
 
 for a in range(1, 997):
-	for b in range(a+1, 998):
-		c = 1000 - b - a
-		if (a + b + c == 1000):
-			if (a * a + b * b == c * c):
-				print(a * b * c)
-
+    for b in range(a+1, 998):
+        c = 1000 - b - a
+        if (a + b + c == 1000):
+            if (a * a + b * b == c * c):
+                print(a * b * c)

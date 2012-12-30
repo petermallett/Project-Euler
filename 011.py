@@ -1,4 +1,4 @@
-﻿#What is the greatest product of four adjacent numbers in any direction (up,
+﻿# What is the greatest product of four adjacent numbers in any direction (up,
 # down, left, right, or diagonally) in the 20x20 grid?
 
 grid = [
@@ -27,25 +27,24 @@ grid = [
 max_prod = 0
 
 for x in range(0, 20):
-	for y in range(0, 20):
-		hprod, yprod, xprod1, xprod2 = 1, 1, 1, 1
-		for d in range(0, 4):
-			if x < 17:
-				hprod *= grid[x+d][y]
-			if y < 17:
-				yprod *= grid[x][y+d]
-			if x < 17 and y < 17:
-				xprod1 *= grid[x+d][y+d]
-			if x < 17 and y > 3:
-				xprod2 *= grid[x+d][y-d]
-		if (hprod > max_prod):
-			max_prod = hprod
-		if (yprod > max_prod):
-			max_prod = yprod
-		if (xprod1 > max_prod):
-			max_prod = xprod1
-		if (xprod2 > max_prod):
-			max_prod = xprod2
+    for y in range(0, 20):
+        hprod, yprod, xprod1, xprod2 = 1, 1, 1, 1
+        for d in range(0, 4):
+            if x < 17:
+                hprod *= grid[x+d][y]
+            if y < 17:
+                yprod *= grid[x][y+d]
+            if x < 17 and y < 17:
+                xprod1 *= grid[x+d][y+d]
+            if x < 17 and y > 3:
+                xprod2 *= grid[x+d][y-d]
+        if (hprod > max_prod):
+            max_prod = hprod
+        if (yprod > max_prod):
+            max_prod = yprod
+        if (xprod1 > max_prod):
+            max_prod = xprod1
+        if (xprod2 > max_prod):
+            max_prod = xprod2
 
 print(max_prod)
-

@@ -22,16 +22,16 @@ long_number = "73167176531330624919225119674426574742355349194934\
 71636269561882670428252483600823257530420752963450"
 
 largest_product = 0
+
 for x in range(1, 1000 - 4):
-	product = 1
-	five_digit = long_number[x:x+5]
-	for y in five_digit:
-		y = int(y)
-		if (y == 0):
-			break;
-		product *= y
-	if (product > largest_product):
-		largest_product = product
+    product = 1
+    five_digit = long_number[x:x+5]
+    for y in five_digit:
+        y = int(y)
+        if (y == 0):
+            break;
+        product *= y
+    if (product > largest_product):
+        largest_product = product
 
 print(largest_product)
-
