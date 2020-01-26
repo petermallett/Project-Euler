@@ -6,9 +6,8 @@ def gcd(x, y):
 def lcm(a, b):
     return(int(a * b / gcd(a, b)))
 
-###
-# Calculates primes up to n and returns them in a list
 def sieve(n):
+    """ Calculates primes up to n and returns them in a list. """
     s = list(range(3, n + 1, 2))
     primes = [2]
     number_limit = n + 1
